@@ -63,11 +63,9 @@ client.once('ready', () => {
 client.login(auth.Security.token);
 
 // Client Message 
-client.on("message", async message => {
+client.on('message', async message => {
 
 	if(message.author.bot) return;
-	
-    if(message.channel.type === "dm") return;  
 
     let messageArray = message.content.split(" ");
     let command = messageArray[0];
